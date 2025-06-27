@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조예진 포트폴리오</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive-tablet.css">
+  <link rel="stylesheet" href="css/responsive-mobile.css">
+  <!-- bootstrap-icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <!-- header -->
+  <header class="header inner">
+    <div class="logo">
+      <a href="#none">yejin's web portfolio</a>
+    </div>
+    <div class="header-btn-wrap">
+      <div class="mode-btn">
+        <input type="checkbox" id="toggleBtn" class="checkbox">
+        <label for="toggleBtn" class="label">
+          <i class="bi bi-brightness-high sun"></i>
+          <i class="bi bi-moon-stars-fill moon"></i>
+          <div class="toggle-slider"></div>
+        </label>
+      </div>
+      <div class="git-btn">
+        <a href="https://github.com/yejin0722" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </header>
+  <!-- main -->
+  <main>
+    <!-- section-intro -->
+    <section class="intro">
+      <div class="intro-title inner">
+        <div class="keep-going">
+          <h2 id="typing-text"></h2>
+        </div>
+      </div>
+      <div class="intro-text-wrap inner">
+        <div class="intro-text">
+          <h3>
+            부족한 건 빠르게 배우고, <br>
+            좋아하는 일은 쉽게 포기하지 않습니다.<br>
+            잘하고 싶다는 마음 하나로, 하루하루 꾸준히 만들고 있습니다.
+          </h3>
+        </div>
+      </div>
+    </section>
+    <!-- section-projects -->
+    <section class="projects inner">
+      <div class="projects-title">
+        <h4>projects</h4>
+      </div>
+      <div class="projects-container">
+        <div class="projects-btns">
+          <button data-filter="All">#All</button>
+          <button data-filter="개인작업">#개인작업</button>
+          <button data-filter="팀작업">#팀작업</button>
+          <button data-filter="리뉴얼">#리뉴얼</button>
+          <button data-filter="SCSS">#SCSS</button>
+          <button data-filter="반응형">#반응형</button>
+        </div>
+        <div class="projects-wrap">
+          <div class="project">
+            <div class="project-thumb">
+              <img src="images/thumb01.png" alt="">
+            </div>
+            <div class="project-desc">
+              <h5>피자스톰 클론코딩</h5>
+              <p>피자스톰 사이트 클론코딩을 통해 AOS animation, swiper.js, JavaScript를 사용한 다양한 UI 인터랙티브 구현</p>
+              <div class="project-tag">
+                <span>개인작업</span>
+                <span>클론코딩</span>
+                <span>SCSS</span>
+              </div>
+              <div class="project-btn-wrap">
+                <a class="button demo" href="https://yejin0722.github.io/PizzaStorm/" target="_blank">DEMO</a>
+                <a class="button" href="https://github.com/yejin0722/PizzaStorm" target="_blank">Github</a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-thumb">
+              <img src="images/thumb02.png" alt="">
+            </div>
+            <div class="project-desc">
+              <h5>한끼:두끼</h5>
+              <p>카페24 ‘한끼:두끼’ 리디자인 기반, 타이머·모달·슬라이드 기능 구현, 헤더/푸터를 인클루드로 분리 유지보수성, 재사용성 향상</p>
+              <div class="project-tag">
+                <span>개인작업</span>
+                <span>반응형</span>
+                <span>SCSS</span>
+              </div>
+              <div class="project-btn-wrap">
+                <a class="button demo" href="https://yejin0722.github.io/OneMeal/" target="_blank">DEMO</a>
+                <a class="button" href="https://github.com/yejin0722/OneMeal" target="_blank">Github</a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-thumb">
+              <img src="images/thumb03.png" alt="">
+            </div>
+            <div class="project-desc">
+              <h5>롯데월드 아쿠아리움 리뉴얼</h5>
+              <p>헤더·푸터 인클루드, 날짜·날씨 API 연동, Swiper 슬라이드, 지도 아이콘 클릭, 썸네일 클릭 이벤트 기능 구현</p>
+              <div class="project-tag">
+                <span>팀작업</span>
+                <span>리뉴얼</span>
+                <span>반응형</span>
+                <span>SCSS</span>
+              </div>
+              <div class="project-btn-wrap">
+                <a class="button demo" href="https://yejin0722.github.io/aquarium/" target="_blank">DEMO</a>
+                <a class="button" href="https://github.com/yejin0722/aquarium" target="_blank">Github</a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-thumb">
+              <img src="images/thumb04.png" alt="">
+            </div>
+            <div class="project-desc">
+              <h5>강원대학교병원 리뉴얼</h5>
+              <p>Swiper.js 슬라이드, AOS 애니메이션, 추천 검색어 텍스트 입력 및 이동 JS 함수, 스크롤 감지 서브네비게이션 토글 스크립트 구현</p>
+              <div class="project-tag">
+                <span>개인작업</span>
+                <span>리뉴얼</span>
+                <span>반응형</span>
+              </div>
+              <div class="project-btn-wrap">
+                <a class="button demo" href="https://yejin0722.github.io/KNUH1/" target="_blank">DEMO</a>
+                <a class="button" href="https://github.com/yejin0722/KNUH1" target="_blank">Github</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer class="footer inner">
+    <p>&copy; 2025 yejin. All Rights Reserved.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

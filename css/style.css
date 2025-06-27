@@ -1,0 +1,457 @@
+@charset "UTF-8";
+/* Font Family */
+/* Text Color */
+/* Object Color */
+/* object */
+/* 스포카 한 산스 네오 */
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 카페24 몽이 화이트 */
+@font-face {
+  font-family: "Cafe24Meongi-W-v1.0";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Meongi-W-v1.0.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 조선굴림체 */
+@font-face {
+  font-family: "ChosunGu";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: "SpoqaHanSansNeo-Regular";
+  font-weight: 100;
+  font-size: 15px;
+  background-color: #FFFFFF;
+  color: #777777;
+  overflow-x: hidden;
+  /* 다크모드 토글 */
+}
+body.dark-mode {
+  background-color: #161616;
+  color: #FFFFFF;
+}
+body.dark-mode a, body.dark-mode p, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+  color: #FFFFFF;
+}
+body.dark-mode .git-btn a i {
+  color: #FFFFFF;
+}
+body.dark-mode .project-desc {
+  color: #FFFFFF;
+}
+body.dark-mode .project-desc h5, body.dark-mode .project-desc p, body.dark-mode .project-desc .project-tag span {
+  color: #FFFFFF;
+}
+body.dark-mode .intro-title .keep-going::before,
+body.dark-mode .intro-title .keep-going::after,
+body.dark-mode .intro-text-wrap .intro-text::before,
+body.dark-mode .intro-text-wrap .intro-text::after,
+body.dark-mode .projects::before,
+body.dark-mode .projects::after {
+  -webkit-filter: brightness(2);
+          filter: brightness(2);
+}
+
+[class*=inner] {
+  width: 1320px;
+  margin: auto;
+  text-align: center;
+}
+
+/* header */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header .logo {
+  font-family: "Cafe24Meongi-W-v1.0";
+  font-size: 30px;
+  color: #777777;
+}
+.header .header-btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.header .header-btn-wrap .mode-btn {
+  margin-top: 3px;
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 30px;
+  /* 인풋 체크됐을때 */
+  /* 슬라이드바 위치 */
+  /* 아이콘들 */
+}
+.header .header-btn-wrap .mode-btn input:checked + .label {
+  background-color: #FFFFFF;
+}
+.header .header-btn-wrap .mode-btn input:checked + .label::before {
+  background-color: #161616;
+  -webkit-transform: translateX(35px);
+          transform: translateX(35px);
+}
+.header .header-btn-wrap .mode-btn .checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.header .header-btn-wrap .mode-btn .label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #777777;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header .header-btn-wrap .mode-btn .label::before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 2px;
+  top: 2px;
+  background-color: #FFFFFF;
+  z-index: 1;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.header .header-btn-wrap .mode-btn .label .bi {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: color 0.3s opacity 0.3s;
+  transition: color 0.3s opacity 0.3s;
+  z-index: 1;
+}
+.header .header-btn-wrap .mode-btn .label .sun {
+  color: #777777;
+  left: 6px;
+  opacity: 1;
+}
+.header .header-btn-wrap .mode-btn .label .moon {
+  color: #FFFFFF;
+  right: 6px;
+  opacity: 0;
+}
+.header .header-btn-wrap .mode-btn input:checked + .label .sun {
+  opacity: 0;
+}
+.header .header-btn-wrap .mode-btn input:checked + .label .moon {
+  opacity: 1;
+}
+.header .header-btn-wrap .git-btn a i {
+  color: #777777;
+  font-size: 30px;
+}
+body.dark-mode .header .header-btn-wrap .git-btn a i {
+  color: #FFFFFF;
+}
+.header .header-btn-wrap input:checked + .git-btn {
+  border: 10px solid #fff;
+}
+
+/* intro */
+.intro {
+  margin-top: 80px;
+}
+.intro .intro-title .keep-going {
+  height: 700px;
+  position: relative;
+}
+.intro .intro-title .keep-going::before {
+  content: "";
+  top: 0;
+  left: 30px;
+  width: 350px;
+  height: 250px;
+  position: absolute;
+  background: url(../images/w-bg-deco01.png) no-repeat;
+  z-index: -1;
+}
+.intro .intro-title .keep-going::after {
+  content: "";
+  bottom: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  right: 30px;
+  width: 420px;
+  height: 400px;
+  position: absolute;
+  background: url(../images/w-bg-deco02.png) no-repeat;
+  z-index: -1;
+}
+.intro .intro-title .keep-going h2 {
+  font-family: "Cafe24Meongi-W-v1.0";
+  font-size: 100px;
+  line-height: 700px;
+  font-weight: 100;
+}
+.intro .intro-text-wrap .intro-text {
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+.intro .intro-text-wrap .intro-text::before {
+  content: "";
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  background: url(../images/w-bg-deco03.png) no-repeat;
+  z-index: -1;
+}
+.intro .intro-text-wrap .intro-text::after {
+  content: "";
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(300px, 150px);
+          transform: translate(300px, 150px);
+  width: 420px;
+  height: 400px;
+  position: absolute;
+  background: url(../images/w-bg-deco04.png) no-repeat;
+  z-index: -1;
+}
+.intro .intro-text-wrap .intro-text h3 {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+/* projects */
+.projects {
+  position: relative;
+}
+.projects::before {
+  content: "";
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-120px);
+          transform: translateX(-120px);
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background: url(../images/w-bg-deco05.png) no-repeat;
+  z-index: -1;
+}
+.projects::after {
+  content: "";
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(200px, 50px);
+          transform: translate(200px, 50px);
+  width: 420px;
+  height: 400px;
+  position: absolute;
+  background: url(../images/w-bg-deco06.png) no-repeat;
+}
+.projects .projects-title {
+  margin-bottom: 50px;
+}
+.projects .projects-title h4 {
+  font-family: "Cafe24Meongi-W-v1.0";
+  font-weight: 100;
+  font-size: 50px;
+}
+.projects .projects-container .projects-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+.projects .projects-container .projects-btns button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 7px;
+  background-color: #F0F0F0;
+  color: #777777;
+  font-family: "SpoqaHanSansNeo-Regular";
+  font-weight: 100;
+  -webkit-transition: -webkit-transform 0.12s;
+  transition: -webkit-transform 0.12s;
+  transition: transform 0.12s;
+  transition: transform 0.12s, -webkit-transform 0.12s;
+}
+.projects .projects-container .projects-btns button:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+.projects .projects-container .projects-btns button.active {
+  background-color: #777777;
+  color: #FFFFFF;
+}
+body.dark-mode .projects .projects-container .projects-btns button {
+  background-color: #333333;
+  color: #777777;
+}
+body.dark-mode .projects .projects-container .projects-btns button.active {
+  background-color: #FFFFFF;
+  color: #777777;
+}
+.projects .projects-container .projects-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 13.5px;
+}
+.projects .projects-container .projects-wrap .project {
+  border-radius: 10px;
+  width: 430px;
+  height: 430px;
+  margin-top: 20px;
+}
+.projects .projects-container .projects-wrap .project .project-thumb img {
+  width: 100%;
+  height: 260px;
+}
+.projects .projects-container .projects-wrap .project .project-desc {
+  text-align: left;
+  color: #333333;
+}
+.projects .projects-container .projects-wrap .project .project-desc h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.projects .projects-container .projects-wrap .project .project-desc p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.projects .projects-container .projects-wrap .project .project-desc .project-tag {
+  margin-bottom: 10px;
+}
+.projects .projects-container .projects-wrap .project .project-desc .project-tag span {
+  color: #777777;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap {
+  margin-top: 20px;
+}
+.projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap .button {
+  display: inline-block;
+  padding: 5px 15px;
+  margin-right: 10px;
+  border-radius: 7px;
+  border: none;
+  background-color: #F0F0F0;
+  color: #777777;
+  font-size: 14px;
+  font-family: "SpoqaHanSansNeo-Regular";
+  font-weight: 100;
+  -webkit-transition: -webkit-transform 0.12s ease, -webkit-box-shadow 0.2s ease;
+  transition: -webkit-transform 0.12s ease, -webkit-box-shadow 0.2s ease;
+  transition: transform 0.12s ease, box-shadow 0.2s ease;
+  transition: transform 0.12s ease, box-shadow 0.2s ease, -webkit-transform 0.12s ease, -webkit-box-shadow 0.2s ease;
+}
+.projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap .button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+body.dark-mode .projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap .button {
+  background-color: #F0F0F0;
+  color: #777777;
+}
+.projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap .button.demo {
+  background-color: #D72539;
+  color: #FFFFFF;
+}
+body.dark-mode .projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap .button.demo {
+  background-color: #D72539;
+  color: #FFFFFF;
+}
+.projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap .button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* footer */
+.footer {
+  height: 80px;
+  line-height: 80px;
+  margin-top: 80px;
+}
+.footer p {
+  font-family: "Cafe24Meongi-W-v1.0";
+  font-size: 20px;
+}

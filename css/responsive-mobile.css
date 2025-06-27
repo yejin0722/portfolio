@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* Font Family */
+/* Text Color */
+/* Object Color */
+/* object */
+/* 스포카 한 산스 네오 */
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 카페24 몽이 화이트 */
+@font-face {
+  font-family: "Cafe24Meongi-W-v1.0";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Meongi-W-v1.0.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 조선굴림체 */
+@font-face {
+  font-family: "ChosunGu";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+  [class*=inner] {
+    width: 95%;
+  }
+  .header .logo {
+    font-size: 18px;
+  }
+  /* intro */
+  .intro .intro-title .keep-going {
+    height: 500px;
+  }
+  .intro .intro-title .keep-going::before {
+    top: 80px;
+    left: 0;
+  }
+  .intro .intro-title .keep-going::after {
+    display: none;
+  }
+  .intro .intro-title .keep-going h2 {
+    font-size: 50px;
+    line-height: 500px;
+  }
+  .intro .intro-text-wrap .intro-text {
+    height: 500px;
+  }
+  .intro .intro-text-wrap .intro-text::before {
+    width: 170px;
+    height: 170px;
+    bottom: 100px;
+    right: 0;
+    background: url(../images/w-bg-deco03.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .intro .intro-text-wrap .intro-text::after {
+    width: 130px;
+    height: 130px;
+    bottom: 90px;
+    right: 0;
+    background: url(../images/w-bg-deco06.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .intro .intro-text-wrap .intro-text h3 {
+    font-size: 18px;
+  }
+  /* projects */
+  .projects::before {
+    width: 100px;
+    background-size: contain;
+    top: -10px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .projects::after {
+    bottom: -20px;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    width: 120px;
+    height: 100px;
+    background-size: contain;
+  }
+  .projects .projects-title {
+    margin-bottom: 25px;
+  }
+  .projects .projects-title h4 {
+    font-size: 40px;
+  }
+  .projects .projects-container .projects-btns {
+    width: 95%;
+    margin: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .projects .projects-container .projects-wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .projects .projects-container .projects-wrap .project .project-desc h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .projects .projects-container .projects-wrap .project .project-desc p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: lighter;
+  }
+  .projects .projects-container .projects-wrap .project .project-desc .project-tag span {
+    font-size: 13px;
+  }
+  .projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap {
+    margin-top: 15px;
+  }
+  .projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap .button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  /* footer */
+  .footer p {
+    font-size: 15px;
+  }
+}

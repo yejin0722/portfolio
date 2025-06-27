@@ -1,0 +1,347 @@
+@import 'variables';
+@import 'fonts';
+@import 'reset';
+
+body{
+  font-family: $primary-kr;
+  font-weight: 100;
+  font-size: 15px;
+  background-color: $white;
+  color: $silver-black;
+  overflow-x: hidden;
+  /* 다크모드 토글 */
+  &.dark-mode{
+    background-color: $black;
+    color: $white;
+    a, p, h1, h2, h3{
+      color: $white;
+    }
+    .git-btn a i{
+      color: $white;
+    }
+    .project-desc {
+      color: $white;
+      h5, p, .project-tag span {
+        color: $white;
+      }
+    }
+    .intro-title .keep-going::before,
+    .intro-title .keep-going::after,
+    .intro-text-wrap .intro-text::before,
+    .intro-text-wrap .intro-text::after,
+    .projects::before,
+    .projects::after {
+      filter: brightness(2);
+    }
+  }
+}
+[class*=inner]{width: 1320px; margin: auto; text-align: center;}
+/* header */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  .logo{
+    font-family: $primary-en;
+    font-size: 30px;
+    color: $silver-black;
+  }
+  .header-btn-wrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .mode-btn{
+      margin-top: 3px;
+      position: relative;
+      display: inline-block;
+      width: 65px;
+      height: 30px;
+      /* 인풋 체크됐을때 */
+      input:checked + .label{
+        background-color: $white;
+      }
+      /* 슬라이드바 위치 */
+      input:checked + .label::before{
+        background-color: $black;
+        transform: translateX(35px);
+      }
+      .checkbox{
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .label{
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $silver-black;
+        transition: background-color 0.3s;
+        border-radius: 50px;
+        display: flex;
+        &::before{
+          position: absolute;
+          content: '';
+          height: 25px;
+          width: 25px;
+          left: 2px;
+          top: 2px;
+          background-color: $white;
+          z-index: 1;
+          border-radius: 50%;
+          transition: transform 0.3s;
+        }
+        .bi{
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: color 0.3s opacity 0.3s;
+          z-index: 1;
+        }
+        .sun{
+          color: $silver-black;
+          left: 6px;
+          opacity: 1;
+        }
+        .moon{
+          color: $white;
+          right: 6px;
+          opacity: 0;
+        }
+        .toggle-slider{}
+      }
+      /* 아이콘들 */
+      input:checked + .label .sun{
+        opacity: 0;
+      }
+      input:checked + .label .moon{
+        opacity: 1;
+      }
+    }
+    .git-btn{
+      a{
+        i{
+          color: $silver-black;
+          font-size: 30px;
+          body.dark-mode &{
+            color: $white;
+          }
+        }
+      }
+    }
+    input:checked + .git-btn{
+      border: 10px solid #fff;
+    }
+  }
+}
+/* intro */
+.intro{
+  margin-top: 80px;
+  .intro-title{
+    .keep-going{
+      height: 700px;
+      position: relative;
+      &::before{
+        content: '';
+        top: 0;
+        left: 30px;
+        width: 350px;
+        height: 250px;
+        position: absolute;
+        background: url(../images/w-bg-deco01.png)no-repeat;
+        z-index: -1;
+      }
+      &::after{
+        content: '';
+        bottom: 0;
+        transform: translateY(200px);
+        right: 30px;
+        width: 420px;
+        height: 400px;
+        position: absolute;
+        background: url(../images/w-bg-deco02.png)no-repeat;
+        z-index: -1;
+      }
+      h2{
+        font-family: $primary-en;
+        font-size: 100px;
+        line-height: 700px;
+        font-weight: 100;
+      }
+    }
+  }
+  .intro-text-wrap{
+    .intro-text{
+      height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      &::before{
+        content: '';
+        top: 0;
+        left: 0;
+        transform: translateX(-200px);
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        background: url(../images/w-bg-deco03.png)no-repeat;
+        z-index: -1;
+      }
+      &::after{
+        content: '';
+        bottom: 0;
+        right: 0;
+        transform: translate(300px, 150px);
+        width: 420px;
+        height: 400px;
+        position: absolute;
+        background: url(../images/w-bg-deco04.png)no-repeat;
+        z-index: -1;
+      }
+      h3{
+        font-size: 40px;
+        font-weight: 100;
+      }
+    }
+  }
+}
+/* projects */
+.projects{
+  position: relative;
+  &::before{
+    content: '';
+    top: 0;
+    left: 0;
+    transform: translateX(-120px);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: url(../images/w-bg-deco05.png) no-repeat;
+    z-index: -1;
+  }
+  &::after{
+    content: '';
+    bottom: 0;
+    right: 0;
+    transform: translate(200px, 50px);
+    width: 420px;
+    height: 400px;
+    position: absolute;
+    background: url(../images/w-bg-deco06.png) no-repeat;
+  }
+  .projects-title{
+    margin-bottom: 50px;
+    h4{
+      font-family: $primary-en;
+      font-weight: 100;
+      font-size: 50px;
+    }
+  }
+  .projects-container{
+    .projects-btns{
+      display: flex;
+      gap: 10px;
+      justify-content: left;
+      button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $btn-padding;
+        border: none;
+        border-radius: $btn-radius;
+        background-color: $silver-gray;
+        color: $silver-black;
+        font-family: $primary-kr;
+        font-weight: 100;
+        transition: transform 0.12s;
+        &:hover{transform: scale(1.08);}
+        &.active{
+          background-color: $silver-black;
+          color: $white;
+        }
+        body.dark-mode &{
+          background-color: $dark-black;
+          color: $silver-black;
+          &.active {
+            background-color: $white;
+            color: $silver-black;
+          }
+        }
+      }
+    }
+    .projects-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13.5px;
+      .project{
+        border-radius: 10px;
+        width: 430px;
+        height: 430px;
+        margin-top: 20px;
+        .project-thumb{
+          img{width: 100%; height: 260px;}
+        }
+        .project-desc{
+          text-align: left;
+          color: $dark-black;
+          h5{font-size: 20px; margin-bottom: 10px;}
+          p{margin-bottom: 10px; font-size: 15px; font-weight: lighter;}
+          .project-tag{
+            span{color: $silver-black; font-size: 14px; margin-right: 10px;}
+            margin-bottom: 10px;
+          }
+          .project-btn-wrap {
+            margin-top: 20px;
+            .button{
+              display: inline-block;
+              padding: $btn-padding;
+              margin-right: 10px;
+              border-radius: $btn-radius;
+              border: none;
+              background-color: $silver-gray;
+              color: $silver-black;
+              font-size: 14px;
+              font-family: $primary-kr;
+              font-weight: 100;
+              transition: transform 0.12s ease, box-shadow 0.2s ease;
+              &:hover{transform: scale(1.05);}
+              body.dark-mode &{
+                background-color: $silver-gray;
+                color: $silver-black;
+              }
+              &.demo{
+                background-color: $crimson;
+                color: $white;
+                body.dark-mode & {
+                  background-color: $crimson;
+                  color: $white;
+                }
+              }
+              a{
+                color: inherit;
+                text-decoration: none;
+                
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* footer */
+.footer{
+  height: 80px;
+  line-height: 80px;
+  margin-top: 80px;
+  p{font-family: $primary-en; font-size: 20px;}
+}
