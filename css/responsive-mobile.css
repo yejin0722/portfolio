@@ -100,7 +100,7 @@ button {
             transform: translate(0);
   }
   .intro .intro-text-wrap .intro-text h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   /* projects */
   .projects::before {
