@@ -232,11 +232,12 @@ body{
     content: '';
     bottom: 0;
     right: 0;
-    transform: translate(200px, 50px);
+    transform: translate(250px, 200px);
     width: 420px;
     height: 400px;
     position: absolute;
     background: url(../images/w-bg-deco06.png) no-repeat;
+    z-index: -1;
   }
   .projects-title{
     margin-bottom: 50px;
@@ -252,6 +253,7 @@ body{
       gap: 10px;
       justify-content: left;
       button{
+        font-size: 18px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -285,8 +287,12 @@ body{
       .project{
         border-radius: 10px;
         width: 430px;
-        height: 430px;
+        height: 460px;
         margin-top: 20px;
+        border: 1px solid $silver-gray;
+        overflow: hidden;
+        padding: 7px 7px 30px 7px;
+        body.dark-mode &{border-color: $silver-black ;}
         .project-thumb{
           img{width: 100%; height: 260px;}
         }
@@ -309,7 +315,7 @@ body{
               border: none;
               background-color: $silver-gray;
               color: $silver-black;
-              font-size: 14px;
+              font-size: 18px;
               font-family: $primary-kr;
               font-weight: 100;
               transition: transform 0.12s ease, box-shadow 0.2s ease;
@@ -319,10 +325,10 @@ body{
                 color: $silver-black;
               }
               &.demo{
-                background-color: $crimson;
+                background-color: #ff0000b3;
                 color: $white;
                 body.dark-mode & {
-                  background-color: $crimson;
+                  background-color: #ff0000b3;
                   color: $white;
                 }
               }

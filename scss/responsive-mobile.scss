@@ -16,13 +16,17 @@
       .keep-going{
         height: 500px;
         &::before{
-          top: 80px;
-          left: 0;
+          background-size: cover;
+          width: 380px;
+          height: 300px;
+          top: 70px;
+          left: -5px;
+          transform: rotate(3deg);
         }
         &::after{
           display: none;
         }
-        h2{font-size: 50px; line-height: 500px;}
+        h2{font-size: 40px; line-height: 500px;}
       }
     }
     .intro-text-wrap{
@@ -36,7 +40,7 @@
           background: url(../images/w-bg-deco03.png);
           background-repeat: no-repeat;
           background-size: contain;
-          transform: translate(0);
+          transform: translateX(0);
         }
         &::after{
           width: 130px;
@@ -49,7 +53,7 @@
           transform: translate(0);
         }
         h3{
-          font-size: 18px;
+          font-size: 16px;
         }
       }
     }
@@ -63,7 +67,7 @@
       transform: translateX(0);
     }
     &::after{
-      bottom: -20px;
+      bottom: -100px;
       transform: translate(0);
       width: 120px;
       height: 100px;
@@ -71,17 +75,24 @@
     }
     .projects-title{
       margin-bottom: 25px;
-      h4{font-size: 40px;}
+      h4{font-size: 30px;}
     }
     .projects-container{
       .projects-btns{
         width: 95%;
         margin: auto;
         flex-wrap: wrap;
+        button{
+          font-size: 16px;
+        }
       }
       .projects-wrap{
         justify-content: center;
         .project{
+          height: 420px;
+          .project-thumb{
+            img{height: 240px;}
+          }
           .project-desc{
             h5{font-size: 18px; margin-bottom: 10px;}
             p{margin-bottom: 10px; font-size: 14px; font-weight: lighter;}
@@ -91,7 +102,7 @@
             .project-btn-wrap {
               margin-top: 15px;
               .button{
-                font-size: 14px;
+                font-size: 16px;
                 padding: 5px 10px;
               }
             }

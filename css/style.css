@@ -304,12 +304,13 @@ body.dark-mode .header .header-btn-wrap .git-btn a i {
   content: "";
   bottom: 0;
   right: 0;
-  -webkit-transform: translate(200px, 50px);
-          transform: translate(200px, 50px);
+  -webkit-transform: translate(250px, 200px);
+          transform: translate(250px, 200px);
   width: 420px;
   height: 400px;
   position: absolute;
   background: url(../images/w-bg-deco06.png) no-repeat;
+  z-index: -1;
 }
 .projects .projects-title {
   margin-bottom: 50px;
@@ -329,6 +330,7 @@ body.dark-mode .header .header-btn-wrap .git-btn a i {
           justify-content: left;
 }
 .projects .projects-container .projects-btns button {
+  font-size: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,8 +379,14 @@ body.dark-mode .projects .projects-container .projects-btns button.active {
 .projects .projects-container .projects-wrap .project {
   border-radius: 10px;
   width: 430px;
-  height: 430px;
+  height: 460px;
   margin-top: 20px;
+  border: 1px solid #F0F0F0;
+  overflow: hidden;
+  padding: 7px 7px 30px 7px;
+}
+body.dark-mode .projects .projects-container .projects-wrap .project {
+  border-color: #777777;
 }
 .projects .projects-container .projects-wrap .project .project-thumb img {
   width: 100%;
@@ -416,7 +424,7 @@ body.dark-mode .projects .projects-container .projects-btns button.active {
   border: none;
   background-color: #F0F0F0;
   color: #777777;
-  font-size: 14px;
+  font-size: 18px;
   font-family: "SpoqaHanSansNeo-Regular";
   font-weight: 100;
   -webkit-transition: -webkit-transform 0.12s ease, -webkit-box-shadow 0.2s ease;
@@ -433,11 +441,11 @@ body.dark-mode .projects .projects-container .projects-wrap .project .project-de
   color: #777777;
 }
 .projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap .button.demo {
-  background-color: #D72539;
+  background-color: rgba(255, 0, 0, 0.7019607843);
   color: #FFFFFF;
 }
 body.dark-mode .projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap .button.demo {
-  background-color: #D72539;
+  background-color: rgba(255, 0, 0, 0.7019607843);
   color: #FFFFFF;
 }
 .projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap .button a {

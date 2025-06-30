@@ -59,14 +59,19 @@ button {
     height: 500px;
   }
   .intro .intro-title .keep-going::before {
-    top: 80px;
-    left: 0;
+    background-size: cover;
+    width: 380px;
+    height: 300px;
+    top: 70px;
+    left: -5px;
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
   }
   .intro .intro-title .keep-going::after {
     display: none;
   }
   .intro .intro-title .keep-going h2 {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 500px;
   }
   .intro .intro-text-wrap .intro-text {
@@ -80,8 +85,8 @@ button {
     background: url(../images/w-bg-deco03.png);
     background-repeat: no-repeat;
     background-size: contain;
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   .intro .intro-text-wrap .intro-text::after {
     width: 130px;
@@ -95,7 +100,7 @@ button {
             transform: translate(0);
   }
   .intro .intro-text-wrap .intro-text h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
   /* projects */
   .projects::before {
@@ -106,7 +111,7 @@ button {
             transform: translateX(0);
   }
   .projects::after {
-    bottom: -20px;
+    bottom: -100px;
     -webkit-transform: translate(0);
             transform: translate(0);
     width: 120px;
@@ -117,7 +122,7 @@ button {
     margin-bottom: 25px;
   }
   .projects .projects-title h4 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .projects .projects-container .projects-btns {
     width: 95%;
@@ -125,10 +130,19 @@ button {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .projects .projects-container .projects-btns button {
+    font-size: 16px;
+  }
   .projects .projects-container .projects-wrap {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .projects .projects-container .projects-wrap .project {
+    height: 420px;
+  }
+  .projects .projects-container .projects-wrap .project .project-thumb img {
+    height: 240px;
   }
   .projects .projects-container .projects-wrap .project .project-desc h5 {
     font-size: 18px;
@@ -146,7 +160,7 @@ button {
     margin-top: 15px;
   }
   .projects .projects-container .projects-wrap .project .project-desc .project-btn-wrap .button {
-    font-size: 14px;
+    font-size: 16px;
     padding: 5px 10px;
   }
   /* footer */
