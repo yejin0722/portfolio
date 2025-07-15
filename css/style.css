@@ -223,6 +223,8 @@ body.dark-mode .header .header-btn-wrap .git-btn a i {
   position: absolute;
   background: url(../images/w-bg-deco01.png) no-repeat;
   z-index: -1;
+  -webkit-animation: floatCloud1 6s ease-in-out infinite;
+          animation: floatCloud1 6s ease-in-out infinite;
 }
 .intro .intro-title .keep-going::after {
   content: "";
@@ -235,6 +237,8 @@ body.dark-mode .header .header-btn-wrap .git-btn a i {
   position: absolute;
   background: url(../images/w-bg-deco02.png) no-repeat;
   z-index: -1;
+  -webkit-animation: floatCloud2 7s ease-in-out infinite;
+          animation: floatCloud2 7s ease-in-out infinite;
 }
 .intro .intro-title .keep-going h2 {
   font-family: "Cafe24Meongi-W-v1.0";
@@ -266,6 +270,8 @@ body.dark-mode .header .header-btn-wrap .git-btn a i {
   position: absolute;
   background: url(../images/w-bg-deco03.png) no-repeat;
   z-index: -1;
+  -webkit-animation: floatCloud3 6s ease-in-out infinite;
+          animation: floatCloud3 6s ease-in-out infinite;
 }
 .intro .intro-text-wrap .intro-text::after {
   content: "";
@@ -278,6 +284,8 @@ body.dark-mode .header .header-btn-wrap .git-btn a i {
   position: absolute;
   background: url(../images/w-bg-deco04.png) no-repeat;
   z-index: -1;
+  -webkit-animation: floatCloud4 8s ease-in-out infinite;
+          animation: floatCloud4 8s ease-in-out infinite;
 }
 .intro .intro-text-wrap .intro-text h3 {
   font-size: 40px;
@@ -311,6 +319,8 @@ body.dark-mode .header .header-btn-wrap .git-btn a i {
   position: absolute;
   background: url(../images/w-bg-deco06.png) no-repeat;
   z-index: -1;
+  -webkit-animation: floatCloud6 7.5s ease-in-out infinite;
+          animation: floatCloud6 7.5s ease-in-out infinite;
 }
 .projects .projects-title {
   margin-bottom: 50px;
@@ -453,6 +463,147 @@ body.dark-mode .projects .projects-container .projects-wrap .project .project-de
   text-decoration: none;
 }
 
+/* 애니메이션 */
+@-webkit-keyframes floatCloud1 {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(10px, -10px);
+            transform: translate(10px, -10px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+@keyframes floatCloud1 {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(10px, -10px);
+            transform: translate(10px, -10px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+@-webkit-keyframes floatCloud2 {
+  0% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  50% {
+    -webkit-transform: translateY(190px);
+            transform: translateY(190px);
+  }
+  100% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
+@keyframes floatCloud2 {
+  0% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  50% {
+    -webkit-transform: translateY(190px);
+            transform: translateY(190px);
+  }
+  100% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
+@-webkit-keyframes floatCloud3 {
+  0% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  50% {
+    -webkit-transform: translate(-190px, -10px);
+            transform: translate(-190px, -10px);
+  }
+  100% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+}
+@keyframes floatCloud3 {
+  0% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  50% {
+    -webkit-transform: translate(-190px, -10px);
+            transform: translate(-190px, -10px);
+  }
+  100% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+}
+@-webkit-keyframes floatCloud4 {
+  0% {
+    -webkit-transform: translate(300px, 150px);
+            transform: translate(300px, 150px);
+  }
+  50% {
+    -webkit-transform: translate(310px, 140px);
+            transform: translate(310px, 140px);
+  }
+  100% {
+    -webkit-transform: translate(300px, 150px);
+            transform: translate(300px, 150px);
+  }
+}
+@keyframes floatCloud4 {
+  0% {
+    -webkit-transform: translate(300px, 150px);
+            transform: translate(300px, 150px);
+  }
+  50% {
+    -webkit-transform: translate(310px, 140px);
+            transform: translate(310px, 140px);
+  }
+  100% {
+    -webkit-transform: translate(300px, 150px);
+            transform: translate(300px, 150px);
+  }
+}
+@-webkit-keyframes floatCloud6 {
+  0% {
+    -webkit-transform: translate(250px, 200px);
+            transform: translate(250px, 200px);
+  }
+  50% {
+    -webkit-transform: translate(260px, 190px);
+            transform: translate(260px, 190px);
+  }
+  100% {
+    -webkit-transform: translate(250px, 200px);
+            transform: translate(250px, 200px);
+  }
+}
+@keyframes floatCloud6 {
+  0% {
+    -webkit-transform: translate(250px, 200px);
+            transform: translate(250px, 200px);
+  }
+  50% {
+    -webkit-transform: translate(260px, 190px);
+            transform: translate(260px, 190px);
+  }
+  100% {
+    -webkit-transform: translate(250px, 200px);
+            transform: translate(250px, 200px);
+  }
+}
 /* footer */
 .footer {
   height: 80px;

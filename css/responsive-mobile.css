@@ -125,7 +125,7 @@ button {
     font-size: 30px;
   }
   .projects .projects-container .projects-btns {
-    width: 95%;
+    width: 100%;
     margin: auto;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
