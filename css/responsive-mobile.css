@@ -91,8 +91,8 @@ button {
   .intro .intro-text-wrap .intro-text::after {
     width: 130px;
     height: 130px;
-    bottom: 90px;
-    right: 0;
+    top: -20px;
+    left: -100px;
     background: url(../images/w-bg-deco06.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -111,6 +111,7 @@ button {
             transform: translateX(0);
   }
   .projects::after {
+    display: none;
     bottom: -100px;
     -webkit-transform: translate(0);
             transform: translate(0);

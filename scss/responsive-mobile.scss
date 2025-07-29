@@ -45,8 +45,8 @@
         &::after{
           width: 130px;
           height: 130px;
-          bottom: 90px;
-          right: 0;
+          top: -20px;
+          left: -100px;
           background: url(../images/w-bg-deco06.png);
           background-repeat: no-repeat;
           background-size: contain;
@@ -67,6 +67,7 @@
       transform: translateX(0);
     }
     &::after{
+      display: none;
       bottom: -100px;
       transform: translate(0);
       width: 120px;
